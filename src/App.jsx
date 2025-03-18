@@ -32,11 +32,11 @@ function App() {
   };
 
   if (loading) {
-    return <div className="bg-[url(https://images5.alphacoders.com/101/thumb-1920-1019631.jpg) flex justify-center items-center"><Loader/></div>;
+    return <div className="bg-[url(https://images5.alphacoders.com/101/thumb-1920-1019631.jpg) flex justify-center items-center h-screen"><Loader/></div>;
   }
 
   if (error) {
-    return <div className="bg-[url(https://images5.alphacoders.com/101/thumb-1920-1019631.jpg) flex justify-center items-center text-white text-5xl">Error: {error}</div>;
+    return <div className="bg-[url(https://images5.alphacoders.com/101/thumb-1920-1019631.jpg) flex justify-center items-center h-screen text-white text-5xl">Error: {error}</div>;
   }
 
   const temperature = unit === 'metric' ? weatherData.main.temp : (weatherData.main.temp * 9/5) + 32;
